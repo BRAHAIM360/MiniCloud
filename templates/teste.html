@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>virtual manager</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      
+      
+</head>
+
+<body>
+
+  <nav role='navigation' id="mainnav">
+  <ul>
+    <li><a href="apropos">a propos </a></li>
+  </ul>
+</nav>  
+
+<div class="hamb">
+  <a href="#"><i class="fa fa-bars"></i></a>
+</div>
+
+  <div class="hero">
+    <div class="cotn_principal">
+        <div class="cont_centrar">
+        
+          <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+              <div class="col_md_login">
+        <div class="cont_ba_opcitiy">
+                
+                <h2>S'identifier</h2>  
+          <p>Vous avez un compte ! alors connecter ici </p> 
+          <button class="btn_login" onclick="cambiar_login()">S'identifier</button>
+          </div>
+          </div>
+        <div class="col_md_sign_up">
+        <div class="cont_ba_opcitiy">
+          <h2>Créer un compte</h2>
+        
+          
+          <p>Vous avez pas de compte ! alors créer un </p>
+        
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">Créer un compte</button>
+        </div>
+          </div>
+               </div>
+        
+            
+            <div class="cont_back_info">
+               <div class="cont_img_back_grey">
+               <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
+               </div>
+               
+            </div>
+            <form  method="post" role="form">
+        <div class="cont_forms" >
+            <div class="cont_img_back_">
+               <img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d" alt="" />
+               </div>
+         <div class="cont_form_login">
+        <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+           <h2>S'identifier</h2>
+         <input type="text" placeholder="Email or Username" name="i_username" />
+        <input type="password" placeholder="Password" name="i_password" />
+        <input class="btn_login" type ="submit" name="action" value="login">
+        <!--<button class="btn_login" onclick="cambiar_login()">S'identifier</button>-->
+          </div>
+          
+           <div class="cont_form_sign_up">
+        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+             <h2>Créer un compte</h2>
+        <input type="text" placeholder="email ex: guerid.hachem@gmail.com" name="c_email" />
+        <input type="text" placeholder="User" name="c_user" />
+        <input type="password" placeholder="Password" name="c_password"/>
+        <input type="password" placeholder="Confirm Password" name="c_password2" />
+        <input class="btn_sign_up" type ="submit" name="action" value="sign_in">
+        <!--<button class="btn_sign_up" onclick="cambiar_sign_up()" name="sign_in">Créer un compte</button>-->
+        
+          </div>
+        
+            </div>
+          </form>
+          </div>
+         </div>
+        </div>
+  </div>
+
+<canvas id="bubble"></canvas>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+    <script  src="{{ url_for('static', filename='js/index.js') }}"></script>
+   
+
+
+
+
+</body>
+
+</html>

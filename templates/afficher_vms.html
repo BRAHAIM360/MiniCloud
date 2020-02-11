@@ -1,0 +1,51 @@
+{% extends "Index.html" %}
+{% block menu%}
+
+<div class="centered" >
+        <h2 class="titree">liste de tout les vms</h2>
+          <table class="zui-table zui-table-vertical">
+                  <thead>
+                      <tr>
+                          <th>numéro vm</th>
+                          <th>nom vm</th>
+                          <th>UID</th>
+                       
+                      </tr>
+                  </thead>
+                  {% for vm in vms %}
+                  <tbody>
+                      <tr>
+                          <td>{{ loop.index}}</td>
+                          <td>{{ vm[0] }}</td>
+                          <td>{{ vm[1] }}</td>
+                          
+                      </tr>
+                  </tbody>
+                  {% endfor %}
+              </table>
+      <h2 class="titree">liste des vms en marche</h2>
+
+
+      <p></p><p></p><p></p><p></p>
+      <table class="zui-table zui-table-vertical">
+              <thead>
+                  <tr>
+                      <th>numéro vm</th>
+                      <th>nom vm</th>
+                      <th>UID</th>
+                   
+                  </tr>
+              </thead>
+              {% for vms in runningvms %}
+              <tbody>
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{vms[0]}}</td>
+                        <td>{{vms[1]}}</td>
+                        
+                    </tr>
+                </tbody>
+                {% endfor %}
+          </table>
+      </div>
+{% endblock menu%}
